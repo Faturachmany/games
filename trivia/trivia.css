@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+li, #about, button {
+  cursor: pointer;
+}
+
+#logo {
+  margin-left: -280px;
+}
+
+header h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header li {
+  display: block;
+  float: left;
+  margin: 3px 15px 0px 0px;
+  padding: 8px 15px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-color: rgba(17, 1, 1, 0.068);
+  outline-color: rgb(34, 34, 34);
+  z-index: 2;
+}
+
+.menu {
+  z-index: 0;
+  box-shadow: 0 0px 3px grey;
+  z-index: 0;
+}
+
+main li {
+  display: inline-block;
+  margin: 2px 3px;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+main li:hover {
+  background-color: rgba(119, 100, 100, 0.233);
+}
+
+/* #numbers {
+  background-color: rgba(237, 225, 209, 0.4);
+} */
+
+/* #sudoku {
+  background-color: rgba(152, 251, 152, 0.4);
+} */
+
+/* #trivia {
+  background-color: rgb(135, 206, 235);
+} */
+
+#trivia:hover {
+  background-color: rgba(135, 206, 235, 1);
+}
+
+#findWords:hover {
+  background-color: rgba(152, 251, 152, 1);
+}
+
+#difficulty {
+  position: relative;
+}
+
+.difficulty-options {
+  display: none;
+  position: absolute;
+  margin: 8px 0 0 -10px;
+  padding: 3px 10px;
+  width: 75px;
+  line-height: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 0;
+}
+
+.difficulty-options a {
+  padding: 3px 8px 3px 2px;
+  display: block;
+  border-radius: 15px;
+}
+
+.difficulty-options a:hover {
+  background-color: rgba(119, 100, 100, 0.233);
+}
+
+#difficulty:hover .difficulty-options {
+  display: block;
+}
+
+footer {
+  width: 100%;
+  box-shadow: 0 0px 1px grey;
+  height: 40px;
+  bottom: 0;
+  position: absolute;
+}
+
+footer span {
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+#mid {
+  display: grid;
+  justify-content: center;
+}

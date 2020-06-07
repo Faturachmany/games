@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Numbers</title>
+  <link rel="stylesheet" type="text/css" href="hard.css">
+</head>
+<body>
+  <header>
+    <ul>
+      <li id="numbers" style="background-color: rgb(237, 225, 209);"><a>Sort Numbers</a></li>
+      <li id="sudoku" style="background-color: rgba(152, 251, 152, 0.4);"><a href="file:///home/faturcahman/Documents/project/sudoku/sudoku.html">Sudoku</a></li>
+      <li id="trivia" style="background-color: rgba(135, 206, 235, 0.4);"><a href="file:///home/faturcahman/Documents/project/trivia/trivia.html">Trivia</a></li>
+    </ul>
+    <h3 id="logo">Sort Numbers</h3>
+    <h3 id="about" onclick="about()">About</h3>
+  </header>
+  <main>
+    <div class="menu" style="background-color: rgb(237, 225, 209);">
+      <ul>
+        <a href="file:///home/faturcahman/Documents/project/sortNumber/hard/hard.html"><li>New Game</li></a>
+        <li id="difficulty"><a>Hard</a>
+          <div class="difficulty-options" style="background-color: rgb(237, 225, 209);">
+            <a href="file:///home/faturcahman/Documents/project/sortNumber/sortNumber.html">Easy</a>
+            <a href="file:///home/faturcahman/Documents/project/sortNumber/medium/medium.html">Medium</a>
+            <a>Hard</a>
+          </div>
+        </li>
+        <li onclick="help()"><a>Help</a></li>
+      </ul>
+    </div>
+    <br>
+    <div class="game-board">
+      <button class="box" onclick="move(this.innerHTML)">1</button>
+      <button class="box" onclick="move(this.innerHTML)">2</button>
+      <button class="box" onclick="move(this.innerHTML)">3</button>
+      <button class="box" onclick="move(this.innerHTML)">4</button>
+      <button class="box" onclick="move(this.innerHTML)">5</button>
+      <button class="box" onclick="move(this.innerHTML)">6</button>
+      <button class="box" onclick="move(this.innerHTML)">7</button>
+      <button class="box" onclick="move(this.innerHTML)">8</button>
+      <button class="box" onclick="move(this.innerHTML)">9</button>
+      <button class="box" onclick="move(this.innerHTML)">10</button>
+      <button class="box" onclick="move(this.innerHTML)">11</button>
+      <button class="box" onclick="move(this.innerHTML)">12</button>
+      <button class="box" onclick="move(this.innerHTML)">13</button>
+      <button class="box" onclick="move(this.innerHTML)">14</button>
+      <button class="box" onclick="move(this.innerHTML)">15</button>
+      <button class="box" onclick="move(this.innerHTML)">16</button>
+      <button class="box" onclick="move(this.innerHTML)">17</button>
+      <button class="box" onclick="move(this.innerHTML)">18</button>
+      <button class="box" onclick="move(this.innerHTML)">19</button>
+      <button class="box" onclick="move(this.innerHTML)">20</button>
+      <button class="box" onclick="move(this.innerHTML)">21</button>
+      <button class="box" onclick="move(this.innerHTML)">22</button>
+      <button class="box" onclick="move(this.innerHTML)">23</button>
+      <button class="box" onclick="move(this.innerHTML)">24</button>
+      <button class="box" onclick="move(this.innerHTML)"> </button>
+  </div>
+</main>
+  <footer style="background-color: rgb(237, 225, 209);">
+    <span>Created by Faturachman Yusup</span>
+  </footer>
+
+  <script type="text/javascript">
+    let gameBoard = document.getElementsByClassName('game-board');
+    let box = document.getElementsByClassName('box');
+    let temp;
+    let randomNumber;
+    
+    let arr = [ 1, 2, 3, 4, 5,
+                6, 7, 8, 9, 10,
+                11, 12, 13, 14, 15,
+                16, 17, 18, 19, 20,
+                21, 22, 23, 24, '' 
+              ];
+
+    const rightArr = [ 1, 2, 3, 4, 5,
+                       6, 7, 8, 9, 10,
+                       11, 12, 13, 14, 15,
+                       16, 17, 18, 19, 20,
+                       21, 22, 23, 24, '' 
+                     ];
+    
+    let index = arr.length;
+    while (index > 0) {
+      randomNumber = Math.floor(Math.random() * index);
+      index--;
+      temp = arr[index];
+      arr[index] = arr[randomNumber];
+      arr[randomNumber] = temp;
+    }
+    for(let i = 0; i < gameBoard[0].children.length; i++) {
+      gameBoard[0].children[i].innerHTML = arr[i];
+    }
+
+    function move(click, empty = arr.indexOf('')) {
+      if (click == arr[empty - 1] && empty !== 5 && empty !== 10 && empty !== 15 && empty !== 20) {
+        let tem = box[empty - 1].innerHTML;
+        let temArray = arr[empty - 1]
+        box[empty - 1].innerHTML = box[empty].innerHTML
+        arr[empty - 1] = arr[empty]
+        box[empty].innerHTML = tem
+        arr[empty] = temArray;
+      } else if(click == arr[empty + 1] && empty !== 4 && empty !== 9 && empty !== 14 && empty !== 19) {
+        let tem = box[empty + 1].innerHTML;
+        let temArray = arr[empty + 1]
+        box[empty + 1].innerHTML = box[empty].innerHTML
+        arr[empty + 1] = arr[empty]
+        box[empty].innerHTML = tem
+        arr[empty] = temArray;
+      } else if (click == arr[empty - 5]) {
+        let tem = box[empty - 5].innerHTML;
+        let temArray = arr[empty - 5]
+        box[empty - 5].innerHTML = box[empty].innerHTML
+        arr[empty - 5] = arr[empty]
+        box[empty].innerHTML = tem
+        arr[empty] = temArray;
+      } else if (click == arr[empty + 5]) {
+        let tem = box[empty + 5].innerHTML;
+        let temArray = arr[empty + 5]
+        box[empty + 5].innerHTML = box[empty].innerHTML
+        arr[empty + 5] = arr[empty]
+        box[empty].innerHTML = tem
+        arr[empty] = temArray;
+      }
+      let flag = true;
+      for(let i = 0; i < arr.length; i++) {
+        if (arr[i] !== rightArr[i]) {
+          flag = false;
+        }
+      }
+      if (flag === true) {
+        alert('CONGRATULATION YOU SOLVED IT!!!')
+      }
+    }
+
+    // this just test
+
+    function help() {
+      alert('Sliding puzzle game consists of a frame of numbered square tiles in random order, with one tile missing, The object of the puzzle is to place the tiles in order by making sliding moves that use the empty space. Endless challenge mode that challenges your logical thinking and mental limits')
+    }
+
+    function about() {
+      alert(`This website is created to complete the final project. At first I want to make a sudoku game, but for some reason I changed my project to make a number sort game. This website is also not completely finished and I will develop it continuously. I am very open to criticism and suggestions. And if anyone want to help me develop it, I don't mind. \n\nThank You Very Much --Fatur`)
+    }
+  </script>
+
+</body>
+</html>
