@@ -4,15 +4,17 @@
    }
   
   header li {
-    margin: 3px 5px 0px 0px;
+    margin: 3px 5px;
   }
   
   .list-game img {
-     height: 20px;  
+     height: 20px;
+     width: 50px;  
   }
 
   .list-game div {
     width: 100px;
+
   }
 }
 
