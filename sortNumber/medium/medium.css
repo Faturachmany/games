@@ -133,7 +133,7 @@ button.box {
   border: 0.5px solid black;
   font-size: 40px;
   margin: -0.5px;
- }
+}
 
 @media only screen and (max-width: 600px) {
   .game-board {
@@ -151,6 +151,10 @@ button.box {
 
   footer {
     display: none;
+  }
+
+  button.box {
+    margin: -1px;
   }
 }
 
