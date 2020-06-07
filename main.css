@@ -12,9 +12,12 @@
      width: 50px;  
   }
 
-  .list-game div {
-    width: 100px;
+  #welcome-logo {
+    height: 50px;
+  }
 
+  .list-game div {
+    width: 50px;
   }
 }
 
@@ -92,6 +95,10 @@ header li {
   align-self: center;
 }
 
+/* #welcome-logo {
+  height: 200px;
+} */
+
 #welcome span {
   margin-top: 20px;
 }
@@ -112,7 +119,7 @@ header li {
 }
 
 .list-game img {
-  height: 500px;
+  height: 200px;  
 }
 
 .list-game span {
