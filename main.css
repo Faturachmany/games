@@ -205,4 +205,8 @@ footer span {
   .list-game img {
     height: 100px;
   }
+
+  #welcome span {
+    font-size: 5px;
+  }
 }
