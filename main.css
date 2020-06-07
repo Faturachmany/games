@@ -182,40 +182,6 @@ main li:hover {
   display: block;
 }
 
-.game-board {
-  margin-top: 15px;
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px; 
-  grid-template-rows: 100px 100px 100px 100px 100px;
-  justify-content: center;
-}
-
-button.box {
-  border: 1px solid black;
-  font-size: 40px;
- }
-
-@media only screen and (max-width: 600px) {
-  .game-board {
-    grid-template-columns: 50px 50px 50px 50px 50px; 
-    grid-template-rows: 50px 50px 50px 50px 50px;
-  }
-  
-  #logo, #about {
-    display: none;
-   }
-  
-  header li {
-    margin: 3px 7px 0px 0px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  button.box {
-    font-size: 30px;
-  }
-}
-
 footer {
   box-shadow: 0 0px 1px grey;
   height: 40px;
