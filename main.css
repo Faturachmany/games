@@ -66,7 +66,7 @@ header li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 70px 0px;
+  margin: 50px 0px;
   align-self: center;
 }
 
@@ -207,6 +207,10 @@ footer span {
   }
 
   #welcome span {
-    font-size: 5px;
+    font-size: 20px;
+  }
+
+  footer {
+    display: none;
   }
 }

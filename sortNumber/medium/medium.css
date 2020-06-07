@@ -148,6 +148,10 @@ button.box {
   header li {
     margin: 3px 7px 0px 0px;
   }
+
+  footer {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
