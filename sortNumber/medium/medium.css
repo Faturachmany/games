@@ -130,9 +130,9 @@ main li:hover {
 }
 
 button.box {
-  border: 1px solid black;
+  border: 0.5px solid black;
   font-size: 40px;
-  margin: -1px;
+  margin: -0.5px;
  }
 
 @media only screen and (max-width: 600px) {
